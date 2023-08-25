@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
+ int
+ char
+ bool
+ float
+ double
+ void
  
  
  
@@ -60,14 +60,14 @@ video: Chapter 2 - Part 3
  */
 
 //2)
-void variableDeclarations()
+void variableDeclarations(int myAge = 29, int myHeight = 190, int myWeight = 105, char myGrade = 5, char mySheet = 120, char volume = 11, bool murderIsLegal = false, bool payTaxes = true, bool skyDivingIsFun = false, float chickenWalk = 5.6f, float chickenRun = 7.8f, float gunSpeed = 6.6f, double humanWalk = 6.0, double humanRun = 8.5, double carSpeed = 10)
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, myAge, myHeight, myWeight, myGrade, mySheet, volume, murderIsLegal, payTaxes, skyDivingIsFun, chickenWalk, chickenRun, gunSpeed, humanWalk, humanRun, carSpeed); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -85,42 +85,93 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  1)
  */
 
+ bool runMarathon(int speed = 10, int lenght = 20)
+{
+    ignoreUnused(speed, lenght); return 
+    { 
+        };
+}
 /*
  2)
  */
-
+ int eatDinner(bool getFull = true)
+ { 
+     ignoreUnused(getFull); return 
+    { 
+        };
+ }
 /*
  3)
  */
-
+ char dinnerReady(int cookingLenght = 60, float foodHeat = 50.f, bool hunger = true)
+ { 
+     ignoreUnused(cookingLenght, foodHeat, hunger); return 
+    { 
+        };
+ }
 /*
  4)
  */
-
+ int playVideoGame(bool consoleStart = true, bool gameBootUp = true, bool badGame = false)
+ { 
+     ignoreUnused(consoleStart, gameBootUp, badGame); return 
+    { 
+        };
+ }
 /*
  5)
  */
-
+ double salary(int workingHour = 40, int productivity = 100)
+ { 
+     ignoreUnused(workingHour, productivity); return 
+    { 
+        };
+ }
 /*
  6)
  */
-
+ float concert(int beer = 12)
+ { 
+     ignoreUnused(beer); return 
+    { 
+        };
+ }
 /*
  7)
  */
-
+ float boat(bool noHole = true, bool noWater = false)
+ { 
+     ignoreUnused(noHole, noWater); return 
+    { 
+        };
+ }
 /*
  8)
  */
-
+ int swimming(int swimSpeed = 10, float swimStyle = 4.5f)
+ { 
+     ignoreUnused(swimSpeed, swimStyle); return 
+    { 
+        };
+ }
 /*
  9)
  */
-
+ int intoxicated(int spirit = 5, bool drug = false, double club = 2)
+ { 
+     ignoreUnused(spirit, drug, club); return 
+    { 
+        };
+ }
 /*
  10)
  */
-
+ int dataBreach(int hack = 1000, bool backDoor = true)
+ { 
+     ignoreUnused(hack, backDoor); return 
+    { 
+        };
+ }
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -141,27 +192,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto marathonRan = runMarathon(1, 4);
     //2)
-    
+    auto dinnerAte = eatDinner(true);
     //3)
-    
+    auto dinnerCold = dinnerReady(3,10,false);
     //4)
-    
+    auto videoGamePlayed = playVideoGame(false, false, true);
     //5)
-    
+    auto paid = salary(1, 10);
     //6)
-    
+    auto live = concert(1);
     //7)
-    
+    auto water = boat(50, 2);
     //8)
-    
+    auto trained = swimming(10, 3);
     //9)
-    
+    auto dizzy = intoxicated(1226, 2845, 4762);
     //10)
+    dataBreach(10, false);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, marathonRan, dinnerAte, dinnerCold, videoGamePlayed, paid, live, water, trained, dizzy);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
