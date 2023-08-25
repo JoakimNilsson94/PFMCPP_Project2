@@ -69,7 +69,7 @@ void variableDeclarations()
     int myHeight = 190;
     int myWeight = 105;
     char myGrade = 'a';
-    char mySheet = 'k';
+    char mySheetSize = 'k';
     char volume = '9';
     bool murderIsLegal = false;
     bool payTaxes = true;
@@ -82,7 +82,7 @@ void variableDeclarations()
     double carSpeed = 10;
 
     
-    ignoreUnused(number, myAge, myHeight, myWeight, myGrade, mySheet, volume, murderIsLegal, payTaxes, skyDivingIsFun, chickenWalk, chickenRun, gunSpeed, humanWalk, humanRun, carSpeed); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, myAge, myHeight, myWeight, myGrade, mySheetSize, volume, murderIsLegal, payTaxes, skyDivingIsFun, chickenWalk, chickenRun, gunSpeed, humanWalk, humanRun, carSpeed); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -116,65 +116,65 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  3)
  */
- char dinnerReady(int cookingLenght = 60, float foodHeat = 50.f, bool hunger = true)
+ char cookDinner(int cookingLenght = 60, float foodHeat = 50.f, bool hungry = true)
  { 
-     ignoreUnused(cookingLenght, foodHeat, hunger); 
+     ignoreUnused(cookingLenght, foodHeat, hungry); 
      return {};
  }
 /*
  4)
  */
- int playVideoGame(bool consoleStart = true, bool gameBootUp = true, bool badGame = false)
+ int playVideoGame(bool consoleStart = true, bool gameBootUp = true)
  { 
-     ignoreUnused(consoleStart, gameBootUp, badGame); 
+     ignoreUnused(consoleStart, gameBootUp); 
      return {};
  }
 /*
  5)
  */
- double salary(int workingHour = 40, int productivity = 100)
+ double earnSalary(int workHour = 40, int productivity = 100)
  { 
-     ignoreUnused(workingHour, productivity); 
+     ignoreUnused(workHour, productivity); 
      return {};
  }
 /*
  6)
  */
- float concert(int beer = 12)
+ float buyConcertTickets(int pay = 12)
  { 
-     ignoreUnused(beer); 
+     ignoreUnused(pay); 
      return {};
  }
 /*
  7)
  */
- float boat(bool noHole = true, bool noWater = false)
+ float rowABoat(int useStrength = 10, bool useOar = true)
  { 
-     ignoreUnused(noHole, noWater); 
+     ignoreUnused(useStrength, useOar); 
      return {};
  }
 /*
  8)
  */
- int swimming(int swimSpeed = 10, float swimStyle = 4.5f)
+ int startSpeaker(bool switchOn = true, float turnVolume = 4.5f)
  { 
-     ignoreUnused(swimSpeed, swimStyle); 
+     ignoreUnused(switchOn, turnVolume); 
      return {};
  }
 /*
  9)
  */
- int intoxicated(int spirit = 5, bool drug = false, double club = 2)
+ int Sew(int cutFabric = 5, bool startMachine = true, double prepareThread = 2)
  { 
-     ignoreUnused(spirit, drug, club); 
+     ignoreUnused(cutFabric, startMachine, prepareThread); 
      return {};
  }
 /*
  10)
  */
- int dataBreach(int hack = 1000, bool backDoor = true)
+ int cleanDishes(int openTap = 50, bool scrubSurface = true)
  { 
-     ignoreUnused(hack, backDoor); 
+     ignoreUnused(openTap, scrubSurface); 
      return {};
  }
 /*
@@ -201,23 +201,23 @@ int main()
     //2)
     auto dinnerAte = eatDinner(true);
     //3)
-    auto dinnerCold = dinnerReady(3, 10, false);
+    auto dinnerCooked = cookDinner(3, 10.f, false);
     //4)
-    auto videoGamePlayed = playVideoGame(false, false, true);
+    auto videoGamePlayed = playVideoGame(false, false);
     //5)
-    auto paid = salary(1, 10);
+    auto salaryEarned = earnSalary(1, 10);
     //6)
-    auto live = concert(1);
+    auto atConcert = buyConcertTickets(1);
     //7)
-    auto water = boat(50, 2);
+    auto boatRowed = rowABoat(50, 2);
     //8)
-    auto trained = swimming(10, 3);
+    auto speakerStarted = startSpeaker(true, 3);
     //9)
-    auto dizzy = intoxicated(1226, 2845, 4762);
+    auto sewed = Sew(10, 3);
     //10)
-    dataBreach(10, false);
+    cleanDishes(10, false);
     
-    ignoreUnused(carRented, marathonRan, dinnerAte, dinnerCold, videoGamePlayed, paid, live, water, trained, dizzy);
+    ignoreUnused(carRented, marathonRan, dinnerAte, dinnerCooked, videoGamePlayed, salaryEarned, atConcert, boatRowed, speakerStarted, sewed);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
