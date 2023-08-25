@@ -164,7 +164,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  9)
  */
- int Sew(int cutFabric = 5, bool startMachine = true, double prepareThread = 2)
+ int sew(int cutFabric = 5, bool startMachine = true, double prepareThread = 2)
  { 
      ignoreUnused(cutFabric, startMachine, prepareThread); 
      return {};
@@ -213,7 +213,7 @@ int main()
     //8)
     auto speakerStarted = startSpeaker(true, 3);
     //9)
-    auto sewed = Sew(10, 3);
+    auto sewed = sew(10, 3);
     //10)
     cleanDishes(10, false);
     
