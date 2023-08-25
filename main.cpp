@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
+ int
+ char
+ bool
+ float
+ double
+ void
  
  
  
@@ -65,9 +65,24 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
+    int myAge = 29;
+    int myHeight = 190;
+    int myWeight = 105;
+    char myGrade = 'a';
+    char mySheetSize = 'k';
+    char volume = '9';
+    bool murderIsLegal = false;
+    bool payTaxes = true;
+    bool skyDivingIsFun = false;
+    float chickenWalk = 5.6f;
+    float chickenRun = 7.8f;
+    float gunSpeed = 6.6f;
+    double humanWalk = 6.0;
+    double humanRun = 8.5;
+    double carSpeed = 10;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, myAge, myHeight, myWeight, myGrade, mySheetSize, volume, murderIsLegal, payTaxes, skyDivingIsFun, chickenWalk, chickenRun, gunSpeed, humanWalk, humanRun, carSpeed); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -85,42 +100,83 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  1)
  */
 
+ bool runMarathon(int speed = 10, int lenght = 20)
+{
+    ignoreUnused(speed, lenght); 
+    return {};
+}
 /*
  2)
  */
-
+ int eatDinner(bool getFull = true)
+ { 
+     ignoreUnused(getFull); 
+     return {};
+ }
 /*
  3)
  */
-
+ char cookDinner(int cookingLenght = 60, float foodHeat = 50.f, bool hungry = true)
+ { 
+     ignoreUnused(cookingLenght, foodHeat, hungry); 
+     return {};
+ }
 /*
  4)
  */
-
+ int playVideoGame(bool consoleStart = true, bool gameBootUp = true)
+ { 
+     ignoreUnused(consoleStart, gameBootUp); 
+     return {};
+ }
 /*
  5)
  */
-
+ double earnSalary(int workHour = 40, int productivity = 100)
+ { 
+     ignoreUnused(workHour, productivity); 
+     return {};
+ }
 /*
  6)
  */
-
+ float buyConcertTickets(int pay = 12)
+ { 
+     ignoreUnused(pay); 
+     return {};
+ }
 /*
  7)
  */
-
+ float rowABoat(int useStrength = 10, bool useOar = true)
+ { 
+     ignoreUnused(useStrength, useOar); 
+     return {};
+ }
 /*
  8)
  */
-
+ int startSpeaker(bool switchOn = true, float turnVolume = 4.5f)
+ { 
+     ignoreUnused(switchOn, turnVolume); 
+     return {};
+ }
 /*
  9)
  */
-
+ int sew(int cutFabric = 5, bool startMachine = true, double prepareThread = 2)
+ { 
+     ignoreUnused(cutFabric, startMachine, prepareThread); 
+     return {};
+ }
 /*
  10)
  */
-
+ int cleanDishes(int openTap = 50, bool scrubSurface = true)
+ { 
+     ignoreUnused(openTap, scrubSurface); 
+     return {};
+ }
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -141,27 +197,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto marathonRan = runMarathon(1, 4);
     //2)
-    
+    auto dinnerAte = eatDinner(true);
     //3)
-    
+    auto dinnerCooked = cookDinner(3, 10.f, false);
     //4)
-    
+    auto videoGamePlayed = playVideoGame(false, false);
     //5)
-    
+    auto salaryEarned = earnSalary(1, 10);
     //6)
-    
+    auto atConcert = buyConcertTickets(1);
     //7)
-    
+    auto boatRowed = rowABoat(50, 2);
     //8)
-    
+    auto speakerStarted = startSpeaker(true, 3);
     //9)
-    
+    auto sewed = sew(10, 3);
     //10)
+    cleanDishes(10, false);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, marathonRan, dinnerAte, dinnerCooked, videoGamePlayed, salaryEarned, atConcert, boatRowed, speakerStarted, sewed);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
