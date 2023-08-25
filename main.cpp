@@ -102,70 +102,80 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 
  bool runMarathon(int speed = 10, int lenght = 20)
 {
-    ignoreUnused(speed, lenght); return {};
+    ignoreUnused(speed, lenght); 
+    return {};
 }
 /*
  2)
  */
  int eatDinner(bool getFull = true)
  { 
-     ignoreUnused(getFull); return {};
+     ignoreUnused(getFull); 
+     return {};
  }
 /*
  3)
  */
  char dinnerReady(int cookingLenght = 60, float foodHeat = 50.f, bool hunger = true)
  { 
-     ignoreUnused(cookingLenght, foodHeat, hunger); return {};
+     ignoreUnused(cookingLenght, foodHeat, hunger); 
+     return {};
  }
 /*
  4)
  */
  int playVideoGame(bool consoleStart = true, bool gameBootUp = true, bool badGame = false)
  { 
-     ignoreUnused(consoleStart, gameBootUp, badGame); return {};
+     ignoreUnused(consoleStart, gameBootUp, badGame); 
+     return {};
  }
 /*
  5)
  */
  double salary(int workingHour = 40, int productivity = 100)
  { 
-     ignoreUnused(workingHour, productivity); return {};
+     ignoreUnused(workingHour, productivity); 
+     return {};
  }
 /*
  6)
  */
  float concert(int beer = 12)
  { 
-     ignoreUnused(beer); return {};
+     ignoreUnused(beer); 
+     return {};
  }
 /*
  7)
  */
  float boat(bool noHole = true, bool noWater = false)
  { 
-     ignoreUnused(noHole, noWater); return {};
+     ignoreUnused(noHole, noWater); 
+     return {};
  }
 /*
  8)
  */
  int swimming(int swimSpeed = 10, float swimStyle = 4.5f)
  { 
-     ignoreUnused(swimSpeed, swimStyle); return {};
+     ignoreUnused(swimSpeed, swimStyle); 
+     return {};
  }
 /*
  9)
  */
  int intoxicated(int spirit = 5, bool drug = false, double club = 2)
  { 
-     ignoreUnused(spirit, drug, club); return {};
+     ignoreUnused(spirit, drug, club); 
+     return {};
  }
 /*
  10)
  */
  int dataBreach(int hack = 1000, bool backDoor = true)
  { 
-     ignoreUnused(hack, backDoor); return {};
+     ignoreUnused(hack, backDoor); 
+     return {};
  }
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
